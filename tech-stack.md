@@ -22,6 +22,8 @@
 
   - Server Hosting
     - EC2
+  - Login & Signup
+    - Cognito
   - Database
     - RDS PostgreSQL
   - Email
