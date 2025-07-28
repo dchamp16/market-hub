@@ -1,3 +1,5 @@
+using MarketHub.Api.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers(); // Add services to the container
@@ -11,6 +13,8 @@ builder.Services.AddCors(options =>
               .AllowAnyMethod();
     });
 });
+
+builder.Services.AddScoped<IEventService, DummyEventService>();
 
 var app = builder.Build(); // Build the application
 

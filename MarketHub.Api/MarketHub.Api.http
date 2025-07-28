@@ -1,6 +1,23 @@
 @MarketHub.Api_HostAddress = http://localhost:5067
 
-GET {{MarketHub.Api_HostAddress}}/weatherforecast/
+### Get all events
+GET {{MarketHub.Api_HostAddress}}/api/events
 Accept: application/json
 
-###
+### Create new event
+POST {{MarketHub.Api_HostAddress}}/api/events
+Content-Type: application/json
+
+{
+  "title": "Big Yard Sale in West Valley",
+  "description": "Furniture, clothes, and electronics",
+  "category": "yard_sale",
+  "address": "123 Main St, West Valley City, UT 84119",
+  "latitude": 40.6925,
+  "longitude": -112.0021,
+  "eventDate": "2025-08-23T08:00:00"
+}
+
+### Get specific event (replace with actual ID)
+GET {{MarketHub.Api_HostAddress}}/api/events/00000000-0000-0000-0000-000000000000
+Accept: application/json
